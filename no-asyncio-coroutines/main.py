@@ -16,8 +16,10 @@ def run(*args: Generator[Any, None, Any]):
             ret = e.value
 
         if ret is SUSPEND:
+            print(f"Coro {idx} suspended")
             coros.appendleft((idx, coro))
         else:
+            print(f"Coro {idx} finished")
             rets[idx] = ret
     return rets
 
@@ -32,5 +34,5 @@ def coro2(y: int):
     return y + 1
 
 
-rets = run(*(coro1(x) for x in range(10)))
+rets = run(*(coro1(x) for x in range(4)))
 print(rets)
