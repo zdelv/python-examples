@@ -24,7 +24,6 @@ is. This is easily done with a match statement.
 from dataclasses import dataclass
 from collections.abc import Sequence
 from typing import assert_never
-from email.message import EmailMessage
 
 
 @dataclass
@@ -32,17 +31,11 @@ class TextBody:
     text: str
     encoding: str = "utf-8"
 
-    def build_message(self) -> EmailMessage:
-        return EmailMessage()
-
 
 @dataclass
 class HTMLBody:
     html: str
     escape: bool = True
-
-    def build_message(self) -> EmailMessage:
-        return EmailMessage()
 
 
 @dataclass
