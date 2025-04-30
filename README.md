@@ -11,3 +11,4 @@ dump interesting experiments I performed.
 | `no-asyncio-coroutines`  | An example of writing coroutines in Python without using asyncio.                                         |
 | `contextvars-coroutines` | An extension of `no-asyncio-coroutines` to use contextvars for context-specific global storage.           |
 | `process-logging`        | An example of using `QueueListener` and `QueueHandler` to log from another process into the main process. |
+| `sum-types-dataclass`    | An example of using dataclasses and `Union` to create a sum type, like Rust's Enum                        |
